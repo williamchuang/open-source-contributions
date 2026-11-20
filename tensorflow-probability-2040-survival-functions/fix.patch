@@ -1,0 +1,309 @@
+diff --git a/tensorflow_probability/python/distributions/beta.py b/tensorflow_probability/python/distributions/beta.py
+index 520f13d..3951d30 100644
+--- a/tensorflow_probability/python/distributions/beta.py
++++ b/tensorflow_probability/python/distributions/beta.py
+@@ -331,6 +331,38 @@ class Beta(distribution.AutoCompositeTensorDistribution):
+     return distribution_util.extend_cdf_outside_support(
+         x, answer, low=0., high=1.)
+ 
++  @distribution_util.AppendDocstring(_beta_sample_note)
++  def _log_survival_function(self, x):
++    return tf.math.log(self._survival_function(x))
++
++  @distribution_util.AppendDocstring(_beta_sample_note)
++  def _survival_function(self, x):
++    # Two formulas for `P[X > x]`:
++    #   direct:     1 - I_x(a, b), whose absolute error is about eps * cdf;
++    #   complement: I_{1-x}(b, a), whose absolute error is about
++    #               eps * ((1 - x) * pdf(x) + sf), from rounding `1 - x`.
++    # The direct form rounds to zero in the upper tail, and the complement
++    # form loses `x` when `x` is tiny.  Pick the form with the smaller error
++    # bound, and feed each branch a safe input so gradients stay finite.
++    concentration1 = tf.convert_to_tensor(self.concentration1)
++    concentration0 = tf.convert_to_tensor(self.concentration0)
++    inside = tf.logical_and(x > 0, x < 1)
++    safe_x = tf.where(inside, x, 0.5)
++    cdf = special.betainc(concentration1, concentration0, safe_x)
++    pdf = tf.math.exp(
++        self._log_unnormalized_prob(safe_x, concentration1, concentration0) -
++        self._log_normalization(concentration1, concentration0))
++    use_complement = (1. - safe_x) * pdf + (1. - cdf) < cdf
++    half = 0.5 * tf.ones_like(safe_x)
++    x_complement = tf.where(use_complement, safe_x, half)
++    x_direct = tf.where(use_complement, half, safe_x)
++    answer = tf.where(
++        use_complement,
++        special.betainc(concentration0, concentration1, 1. - x_complement),
++        1. - special.betainc(concentration1, concentration0, x_direct))
++    answer = tf.where(x <= 0, tf.ones_like(answer), answer)
++    return tf.where(x >= 1, tf.zeros_like(answer), answer)
++
+   @distribution_util.AppendDocstring(_beta_sample_note)
+   def _quantile(self, p):
+     concentration1 = tf.convert_to_tensor(self.concentration1)
+diff --git a/tensorflow_probability/python/distributions/beta_test.py b/tensorflow_probability/python/distributions/beta_test.py
+index 5bc6b23..0811517 100644
+--- a/tensorflow_probability/python/distributions/beta_test.py
++++ b/tensorflow_probability/python/distributions/beta_test.py
+@@ -303,6 +303,35 @@ class BetaTest(test_util.TestCase):
+     cdf = beta.Beta(2., 3., validate_args=False).cdf([-3.7, 1.03])
+     self.assertAllEqual([0., 1.], self.evaluate(cdf))
+ 
++  def testBetaSurvivalFunctionUpperTail(self):
++    # `1 - cdf` rounds to zero here; see GitHub issue #2040.
++    a = np.array([50., 2., 0.5], dtype=np.float64)
++    b = np.array([200., 3., 30.], dtype=np.float64)
++    x = np.array([0.5, 0.999999, 0.97], dtype=np.float64)
++    dist = beta.Beta(a, b, validate_args=True)
++    expected_sf = sp_stats.beta.sf(x, a, b)
++    self.assertAllClose(
++        self.evaluate(dist.survival_function(x)), expected_sf, rtol=1e-10,
++        atol=0.)
++    self.assertAllClose(
++        self.evaluate(dist.log_survival_function(x)), np.log(expected_sf),
++        rtol=1e-10, atol=0.)
++
++  def testBetaSurvivalFunctionNearZero(self):
++    # `1 - x` rounds to 1 here, so the complement formula alone is wrong.
++    a = np.array([0.01, 1e-4, 1e-4], dtype=np.float64)
++    b = np.array([1., 1., 1.], dtype=np.float64)
++    x = np.array([1e-20, 1e-15, 1e-300], dtype=np.float64)
++    dist = beta.Beta(a, b, validate_args=True)
++    self.assertAllClose(
++        self.evaluate(dist.survival_function(x)), sp_stats.beta.sf(x, a, b),
++        rtol=1e-10, atol=0.)
++
++  def testBetaSurvivalFunctionBeyondSupport(self):
++    sf = beta.Beta(2., 3., validate_args=False).survival_function(
++        [-3.7, 0., 1., 1.03])
++    self.assertAllEqual([1., 1., 0., 0.], self.evaluate(sf))
++
+   @parameterized.parameters((np.float32, 5e-3), (np.float64, 1e-4))
+   def testBetaQuantile(self, dt, rtol):
+     shape = (30, 4, 5)
+diff --git a/tensorflow_probability/python/distributions/binomial.py b/tensorflow_probability/python/distributions/binomial.py
+index 560c1c6..3afe2a0 100644
+--- a/tensorflow_probability/python/distributions/binomial.py
++++ b/tensorflow_probability/python/distributions/binomial.py
+@@ -65,6 +65,28 @@ def _bdtr(k, n, p):
+   return distribution_util.extend_cdf_outside_support(k, dk, low=0, high=n)
+ 
+ 
++def _bdtrc(k, n, p):
++  """The binomial complemented cumulative distribution function.
++
++  Args:
++    k: floating point `Tensor`.
++    n: floating point `Tensor`.
++    p: floating point `Tensor`.
++
++  Returns:
++    `sum_{j=k+1}^n p^j (1 - p)^(n - j)`, computed as `betainc(k + 1, n - k, p)`
++    so that the upper tail does not round to zero as `1 - _bdtr` does.
++  """
++  # Same double-where trick as in `_bdtr` for safe gradients.
++  unsafe = tf.logical_or(k < 0, k >= n)
++  ones = tf.ones_like(n - k)
++  safe_dn = tf.where(unsafe, ones, n - k)
++  safe_k1 = tf.where(unsafe, ones, k + 1)
++  dk = special.betainc(a=safe_k1, b=safe_dn, x=p)
++  dk = tf.where(k < 0, tf.ones_like(dk), dk)
++  return tf.where(k >= n, tf.zeros_like(dk), dk)
++
++
+ def _random_binomial_cpu(
+     shape,
+     counts,
+@@ -435,6 +457,16 @@ class Binomial(
+ 
+     return _bdtr(k=counts, n=total_count, p=probs)
+ 
++  def _survival_function(self, counts):
++    total_count = tf.convert_to_tensor(self.total_count)
++    probs = self._probs_parameter_no_checks(total_count=total_count)
++    probs, counts = _maybe_broadcast(probs, counts)
++
++    return _bdtrc(k=counts, n=total_count, p=probs)
++
++  def _log_survival_function(self, counts):
++    return tf.math.log(self._survival_function(counts))
++
+   @distribution_util.AppendDocstring(_binomial_sample_note)
+   def _sample_n(self, n, seed=None):
+     seed = samplers.sanitize_seed(seed, salt='binomial')
+diff --git a/tensorflow_probability/python/distributions/binomial_test.py b/tensorflow_probability/python/distributions/binomial_test.py
+index 5530d00..5a169ba 100644
+--- a/tensorflow_probability/python/distributions/binomial_test.py
++++ b/tensorflow_probability/python/distributions/binomial_test.py
+@@ -195,6 +195,31 @@ class BinomialTest(test_util.TestCase):
+     cdf = binom.cdf(counts)
+     self.assertAllEqual([[0., 1.]], self.evaluate(cdf))
+ 
++  def testSurvivalFunctionUpperTail(self):
++    # `1 - cdf` rounds to zero here; see GitHub issue #2040.
++    n = np.array([50., 1000., 20.], dtype=np.float64)
++    p = np.array([0.01, 0.3, 0.5], dtype=np.float64)
++    counts = np.array([25., 600., 10.], dtype=np.float64)
++    expected_sf = stats.binom.sf(counts, n, p)
++    for binom in [
++        binomial_lib.Binomial(total_count=n, probs=p, validate_args=True),
++        binomial_lib.Binomial(
++            total_count=n, logits=np.log(p) - np.log1p(-p),
++            validate_args=True)]:
++      self.assertAllClose(
++          self.evaluate(binom.survival_function(counts)), expected_sf,
++          rtol=1e-10, atol=0.)
++      self.assertAllClose(
++          self.evaluate(binom.log_survival_function(counts)),
++          np.log(expected_sf), rtol=1e-10, atol=0.)
++
++  def testSurvivalFunctionBeyondSupport(self):
++    p = [[0.1, 0.9, 0.5]]
++    counts = [[-1., 3., 4.]]
++    binom = binomial_lib.Binomial(total_count=3., probs=p, validate_args=False)
++    sf = binom.survival_function(counts)
++    self.assertAllEqual([[1., 0., 0.]], self.evaluate(sf))
++
+   def testBinomialMean(self):
+     n = 5.
+     p = [0.1, 0.2, 0.7]
+diff --git a/tensorflow_probability/python/distributions/chi2.py b/tensorflow_probability/python/distributions/chi2.py
+index f1f7eae..f45c8a2 100644
+--- a/tensorflow_probability/python/distributions/chi2.py
++++ b/tensorflow_probability/python/distributions/chi2.py
+@@ -135,6 +135,14 @@ class Chi2(distribution.AutoCompositeTensorDistribution):
+   def _cdf(self, x):
+     return tf.math.igamma(0.5 * self.df, 0.5 * x)
+ 
++  def _survival_function(self, x):
++    # Use the complementary regularized incomplete gamma function directly;
++    # `1 - cdf` rounds to zero in the upper tail.
++    return tf.math.igammac(0.5 * self.df, 0.5 * x)
++
++  def _log_survival_function(self, x):
++    return tf.math.log(self._survival_function(x))
++
+   def _quantile(self, p):
+     return 2. * special.igammainv(0.5 * self.df, p)
+ 
+diff --git a/tensorflow_probability/python/distributions/chi2_test.py b/tensorflow_probability/python/distributions/chi2_test.py
+index 0af1f84..6de189a 100644
+--- a/tensorflow_probability/python/distributions/chi2_test.py
++++ b/tensorflow_probability/python/distributions/chi2_test.py
+@@ -72,6 +72,19 @@ class Chi2Test(test_util.TestCase):
+     self.assertEqual(cdf.shape, (6,))
+     self.assertAllClose(self.evaluate(cdf), expected_cdf)
+ 
++  def testChi2SurvivalFunctionUpperTail(self):
++    # `1 - cdf` rounds to zero here; see GitHub issue #2040.
++    df = np.array([1.80006, 20., 3.], dtype=np.float64)
++    x = np.array([90.5982, 100., 1300.], dtype=np.float64)
++    dist = chi2.Chi2(df=df, validate_args=True)
++    expected_sf = stats.chi2.sf(x, df)
++    self.assertAllClose(
++        self.evaluate(dist.survival_function(x)), expected_sf, rtol=1e-12,
++        atol=0.)
++    self.assertAllClose(
++        self.evaluate(dist.log_survival_function(x)), np.log(expected_sf),
++        rtol=1e-12, atol=0.)
++
+   def testChi2Quantile(self):
+     batch_size = 6
+     df = np.linspace(1., 20., batch_size).astype(np.float64)[..., np.newaxis]
+diff --git a/tensorflow_probability/python/distributions/exponential_test.py b/tensorflow_probability/python/distributions/exponential_test.py
+index c71696b..f1bcff3 100644
+--- a/tensorflow_probability/python/distributions/exponential_test.py
++++ b/tensorflow_probability/python/distributions/exponential_test.py
+@@ -67,6 +67,24 @@ class ExponentialTest(test_util.TestCase):
+     expected_cdf = sp_stats.expon.cdf(x, scale=1 / lam_v)
+     self.assertAllClose(self.evaluate(cdf), expected_cdf)
+ 
++  def testExponentialSurvivalFunctionUpperTail(self):
++    # `1 - cdf` rounds to zero here; see GitHub issue #2040.
++    lam = np.array([2., 0.5], dtype=np.float64)
++    x = np.array([20., 600.], dtype=np.float64)
++    dist = exponential.Exponential(rate=lam, validate_args=True)
++    self.assertAllClose(
++        self.evaluate(dist.survival_function(x)),
++        sp_stats.expon.sf(x, scale=1 / lam), rtol=1e-12, atol=0.)
++
++  @test_util.numpy_disable_gradient_test
++  def testExponentialSurvivalFunctionGradientBeyondSupport(self):
++    x = tf.constant([-1., 0.])
++    _, grad = gradient.value_and_gradient(
++        lambda r: exponential.Exponential(  # pylint: disable=g-long-lambda
++            rate=r, validate_args=False).survival_function(x),
++        tf.constant(2.))
++    self.assertAllEqual(0., self.evaluate(grad))
++
+   def testExponentialLogSurvival(self):
+     batch_size = 7
+     lam = tf.constant([2.0] * batch_size)
+diff --git a/tensorflow_probability/python/distributions/gamma.py b/tensorflow_probability/python/distributions/gamma.py
+index c90de22..90c3686 100644
+--- a/tensorflow_probability/python/distributions/gamma.py
++++ b/tensorflow_probability/python/distributions/gamma.py
+@@ -303,6 +303,19 @@ class Gamma(distribution.AutoCompositeTensorDistribution):
+     cdf = tf.math.igamma(self.concentration, self._rate_parameter() * x)
+     return distribution_util.extend_cdf_outside_support(x, cdf, low=0.)
+ 
++  def _survival_function(self, x):
++    # Use the complementary regularized incomplete gamma function directly;
++    # `1 - cdf` rounds to zero in the upper tail.
++    # Double-where trick: for x <= 0 the answer is 1, and evaluating `igammac`
++    # at a safe interior point keeps gradients finite there.
++    safe_x = tf.where(x > 0., x, tf.ones_like(x))
++    survival = tf.math.igammac(
++        self.concentration, self._rate_parameter() * safe_x)
++    return tf.where(x > 0., survival, tf.ones_like(survival))
++
++  def _log_survival_function(self, x):
++    return tf.math.log(self._survival_function(x))
++
+   def _quantile(self, p):
+     return special.igammainv(self.concentration, p) / self._rate_parameter()
+ 
+diff --git a/tensorflow_probability/python/distributions/gamma_test.py b/tensorflow_probability/python/distributions/gamma_test.py
+index 713814b..1bfd4fb 100644
+--- a/tensorflow_probability/python/distributions/gamma_test.py
++++ b/tensorflow_probability/python/distributions/gamma_test.py
+@@ -165,6 +165,39 @@ class GammaTest(test_util.TestCase):
+     self.assertAllClose(cdf, expected_cdf)
+     self.assertAllClose(gamma_lr.cdf(x), expected_cdf)
+ 
++  def testGammaSurvivalFunctionUpperTail(self):
++    # `1 - cdf` rounds to zero here; see GitHub issue #2040.
++    concentration = np.array([2., 0.5, 50.], dtype=np.float64)
++    rate = np.array([3., 1., 0.25], dtype=np.float64)
++    x = np.array([20., 45., 700.], dtype=np.float64)
++    expected_sf = sp_stats.gamma.sf(x, concentration, scale=1 / rate)
++    for dist in [
++        gamma_lib.Gamma(concentration=concentration, rate=rate,
++                        validate_args=True),
++        gamma_lib.Gamma(concentration=concentration, log_rate=np.log(rate),
++                        validate_args=True)]:
++      self.assertAllClose(
++          self.evaluate(dist.survival_function(x)), expected_sf, rtol=1e-12,
++          atol=0.)
++      self.assertAllClose(
++          self.evaluate(dist.log_survival_function(x)), np.log(expected_sf),
++          rtol=1e-12, atol=0.)
++
++  def testGammaSurvivalFunctionBeyondSupport(self):
++    dist = gamma_lib.Gamma(concentration=2., rate=3., validate_args=False)
++    self.assertAllEqual(
++        [1., 1.], self.evaluate(dist.survival_function([-3.7, 0.])))
++
++  @test_util.numpy_disable_gradient_test
++  def testGammaSurvivalFunctionGradientsBeyondSupport(self):
++    x = tf.constant([-3.7, 0.])
++    _, grads = gradient.value_and_gradient(
++        lambda c, r: gamma_lib.Gamma(  # pylint: disable=g-long-lambda
++            concentration=c, rate=r,
++            validate_args=False).survival_function(x),
++        [tf.constant(0.5), tf.constant(3.)])
++    self.assertAllEqual([0., 0.], self.evaluate(grads))
++
+   def testGammaQuantile(self):
+     batch_size = 6
+     concentration = np.linspace(

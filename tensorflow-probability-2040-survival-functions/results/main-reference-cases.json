@@ -1,0 +1,94 @@
+{
+ "label": "main",
+ "worst_rel_error": 2.738123457332502e+69,
+ "cases": [
+  {
+   "call": "Chi2(1.80006).survival_function(90.5982)",
+   "value": 0.0,
+   "reference": 1.353746583750376e-20,
+   "rel_error": 1.0,
+   "log_value": -Infinity,
+   "log_reference": -45.74882586409646
+  },
+  {
+   "call": "Chi2(20).survival_function(100)",
+   "value": 1.2596590437397026e-12,
+   "reference": 1.2596084591660908e-12,
+   "rel_error": 4.0158966259522486e-05,
+   "log_value": -27.40018003179059,
+   "log_reference": -27.4002201899505
+  },
+  {
+   "call": "Chi2(3).survival_function(1300)",
+   "value": 0.0,
+   "reference": 1.4717437106980104e-281,
+   "rel_error": 1.0,
+   "log_value": -Infinity,
+   "log_reference": -646.6399632357592
+  },
+  {
+   "call": "Gamma(2, 3).survival_function(20)",
+   "value": 0.0,
+   "reference": 5.341471565244877e-25,
+   "rel_error": 1.0,
+   "log_value": -Infinity,
+   "log_reference": -55.889126135826686
+  },
+  {
+   "call": "Beta(50, 200).survival_function(0.5)",
+   "value": 1.1102230246251565e-16,
+   "reference": 3.930291809057418e-23,
+   "rel_error": 2824784.2285843776,
+   "log_value": -36.7368005696771,
+   "log_reference": -51.590743464069845
+  },
+  {
+   "call": "Beta(2, 3).survival_function(0.999999)",
+   "value": 1.1102230246251565e-16,
+   "reference": 3.9999970003450675e-18,
+   "rel_error": 26.755596429931845,
+   "log_value": -36.7368005696771,
+   "log_reference": -40.06023806268695
+  },
+  {
+   "call": "Beta(0.01, 1).survival_function(1e-20)",
+   "value": 0.3690426555198061,
+   "reference": 0.36904265551980675,
+   "rel_error": 1.8227563017851693e-15,
+   "log_value": -0.9968430440078486,
+   "log_reference": -0.9968430440078468
+  },
+  {
+   "call": "Beta(1e-4, 1).survival_function(1e-300)",
+   "value": 0.06674569920300699,
+   "reference": 0.06674569920300896,
+   "rel_error": 2.94817759905493e-14,
+   "log_value": -2.7068654151931963,
+   "log_reference": -2.706865415193167
+  },
+  {
+   "call": "Binomial(50, probs=0.01).survival_function(25)",
+   "value": 1.1102230246251565e-16,
+   "reference": 9.636274128773452e-39,
+   "rel_error": 1.1521289346782734e+22,
+   "log_value": -36.7368005696771,
+   "log_reference": -87.53528409402074
+  },
+  {
+   "call": "Binomial(1000, probs=0.3).survival_function(600)",
+   "value": 1.1102230246251565e-16,
+   "reference": 4.05468577997116e-86,
+   "rel_error": 2.738123457332502e+69,
+   "log_value": -36.7368005696771,
+   "log_reference": -196.62244480244925
+  },
+  {
+   "call": "Exponential(2).survival_function(20)",
+   "value": 0.0,
+   "reference": 4.248354255291589e-18,
+   "rel_error": 1.0,
+   "log_value": -40.0,
+   "log_reference": -40.0
+  }
+ ]
+}

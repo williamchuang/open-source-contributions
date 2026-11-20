@@ -1,0 +1,7 @@
+points: 125
+non-finite before, finite after: 116
+finite before, non-finite after: 4
+  Beta[50.0, 200.0] at x=0.999999: log_survival_function: -36.7368005696771 -> -inf
+  Beta[50.0, 200.0] at x=0.999999: d log_survival_function / d concentration1: 0.0 -> nan
+  Beta[50.0, 200.0] at x=0.999999: d log_survival_function / d concentration0: -0.0 -> nan
+  Beta[50.0, 200.0] at x=0.999999: d log_survival_function / d x: -0.0 -> nan

@@ -1,0 +1,11 @@
+Rewritten base-commit modules vs released 0.25.0 (differing lines shown):
+  numpy/chi2.py: 0 line(s) 
+  jax/chi2.py: 0 line(s) 
+  numpy/gamma.py: 1 line(s) -> > # Dependency imports
+  jax/gamma.py: 1 line(s) -> > # Dependency imports
+  numpy/beta.py: 1 line(s) -> > # Dependency imports
+  jax/beta.py: 1 line(s) -> > # Dependency imports
+  numpy/binomial.py: 1 line(s) -> > # Dependency imports
+  jax/binomial.py: 1 line(s) -> > # Dependency imports
+  numpy/exponential.py: 1 line(s) -> > # Dependency imports
+  jax/exponential.py: 1 line(s) -> > # Dependency imports

@@ -1,0 +1,13 @@
+call                                                          value      reference rel. error     log value log reference
+Chi2(1.80006).survival_function(90.5982)               1.353747e-20   1.353747e-20    8.1e-16      -45.7488      -45.7488
+Chi2(20).survival_function(100)                        1.259608e-12   1.259608e-12    4.8e-15      -27.4002      -27.4002
+Chi2(3).survival_function(1300)                       1.471744e-281  1.471744e-281    5.8e-15     -646.6400     -646.6400
+Gamma(2, 3).survival_function(20)                      5.341472e-25   5.341472e-25    1.4e-15      -55.8891      -55.8891
+Beta(50, 200).survival_function(0.5)                   3.930292e-23   3.930292e-23    1.9e-13      -51.5907      -51.5907
+Beta(2, 3).survival_function(0.999999)                 3.999997e-18   3.999997e-18    4.0e-15      -40.0602      -40.0602
+Beta(0.01, 1).survival_function(1e-20)                 3.690427e-01   3.690427e-01    1.8e-15       -0.9968       -0.9968
+Beta(1e-4, 1).survival_function(1e-300)                6.674570e-02   6.674570e-02    2.9e-14       -2.7069       -2.7069
+Binomial(50, probs=0.01).survival_function(25)         9.636274e-39   9.636274e-39    5.3e-15      -87.5353      -87.5353
+Binomial(1000, probs=0.3).survival_function(600)       4.054686e-86   4.054686e-86    4.6e-13     -196.6224     -196.6224
+Exponential(2).survival_function(20)                   4.248354e-18   4.248354e-18    1.4e-15      -40.0000      -40.0000
+[fixed] worst relative error: 4.6e-13

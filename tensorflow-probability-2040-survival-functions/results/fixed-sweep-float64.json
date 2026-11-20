@@ -1,0 +1,42 @@
+{
+ "label": "fixed",
+ "dtype": "float64",
+ "distributions": {
+  "Gamma": {
+   "points": 276,
+   "max_rel_error": 1.7680324340224956e-13,
+   "median_rel_error": 1.2770696776505517e-15,
+   "points_off_by_more_than_1e_2": 0
+  },
+  "Gamma(log_rate)": {
+   "points": 276,
+   "max_rel_error": 1.769496037030792e-13,
+   "median_rel_error": 1.4159366739454108e-15,
+   "points_off_by_more_than_1e_2": 0
+  },
+  "Chi2": {
+   "points": 268,
+   "max_rel_error": 4.261181089417934e-13,
+   "median_rel_error": 8.526178259715108e-16,
+   "points_off_by_more_than_1e_2": 0
+  },
+  "Beta": {
+   "points": 300,
+   "max_rel_error": 4.296171952583169e-13,
+   "median_rel_error": 3.8223910344814715e-16,
+   "points_off_by_more_than_1e_2": 0
+  },
+  "Binomial": {
+   "points": 143,
+   "max_rel_error": 3.871840776228983e-12,
+   "median_rel_error": 8.202866842436868e-14,
+   "points_off_by_more_than_1e_2": 0
+  },
+  "Binomial(logits)": {
+   "points": 143,
+   "max_rel_error": 3.815623865163296e-12,
+   "median_rel_error": 9.524235779030232e-14,
+   "points_off_by_more_than_1e_2": 0
+  }
+ }
+}

@@ -1,0 +1,6 @@
+[fixed float32] Gamma             points= 160  median=4.3e-07  max=1.6e-04  off by >1e-2: 0
+[fixed float32] Gamma(log_rate)   points= 160  median=4.0e-07  max=1.6e-04  off by >1e-2: 0
+[fixed float32] Chi2              points= 159  median=2.7e-07  max=9.1e-05  off by >1e-2: 0
+[fixed float32] Beta              points= 184  median=8.9e-08  max=1.6e-04  off by >1e-2: 0
+[fixed float32] Binomial          points=  42  median=1.1e-05  max=1.9e-03  off by >1e-2: 0
+[fixed float32] Binomial(logits)  points=  42  median=1.1e-05  max=1.9e-03  off by >1e-2: 0

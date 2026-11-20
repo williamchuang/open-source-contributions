@@ -1,0 +1,6 @@
+[main float64] Gamma             points= 276  median=1.3e-14  max=1.0e+00  off by >1e-2: 66
+[main float64] Gamma(log_rate)   points= 276  median=1.3e-14  max=1.0e+00  off by >1e-2: 66
+[main float64] Chi2              points= 268  median=3.0e-15  max=1.0e+00  off by >1e-2: 56
+[main float64] Beta              points= 300  median=7.1e-16  max=4.1e+154  off by >1e-2: 51
+[main float64] Binomial          points= 143  median=2.1e+16  max=4.6e+286  off by >1e-2: 88
+[main float64] Binomial(logits)  points= 143  median=2.1e+16  max=4.6e+286  off by >1e-2: 88

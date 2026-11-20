@@ -1,0 +1,94 @@
+{
+ "label": "fixed",
+ "worst_rel_error": 4.611102982950283e-13,
+ "cases": [
+  {
+   "call": "Chi2(1.80006).survival_function(90.5982)",
+   "value": 1.353746583750377e-20,
+   "reference": 1.353746583750376e-20,
+   "rel_error": 8.085019166658367e-16,
+   "log_value": -45.74882586409646,
+   "log_reference": -45.74882586409646
+  },
+  {
+   "call": "Chi2(20).survival_function(100)",
+   "value": 1.2596084591660847e-12,
+   "reference": 1.2596084591660908e-12,
+   "rel_error": 4.777496521602804e-15,
+   "log_value": -27.400220189950502,
+   "log_reference": -27.4002201899505
+  },
+  {
+   "call": "Chi2(3).survival_function(1300)",
+   "value": 1.4717437106980018e-281,
+   "reference": 1.4717437106980104e-281,
+   "rel_error": 5.781361222359968e-15,
+   "log_value": -646.6399632357592,
+   "log_reference": -646.6399632357592
+  },
+  {
+   "call": "Gamma(2, 3).survival_function(20)",
+   "value": 5.341471565244885e-25,
+   "reference": 5.341471565244877e-25,
+   "rel_error": 1.3786322166078473e-15,
+   "log_value": -55.889126135826686,
+   "log_reference": -55.889126135826686
+  },
+  {
+   "call": "Beta(50, 200).survival_function(0.5)",
+   "value": 3.930291809058172e-23,
+   "reference": 3.930291809057418e-23,
+   "rel_error": 1.9174802148123856e-13,
+   "log_value": -51.590743464069654,
+   "log_reference": -51.590743464069845
+  },
+  {
+   "call": "Beta(2, 3).survival_function(0.999999)",
+   "value": 3.999997000345084e-18,
+   "reference": 3.9999970003450675e-18,
+   "rel_error": 4.021518722214574e-15,
+   "log_value": -40.06023806268694,
+   "log_reference": -40.06023806268695
+  },
+  {
+   "call": "Beta(0.01, 1).survival_function(1e-20)",
+   "value": 0.3690426555198061,
+   "reference": 0.36904265551980675,
+   "rel_error": 1.8227563017851693e-15,
+   "log_value": -0.9968430440078486,
+   "log_reference": -0.9968430440078468
+  },
+  {
+   "call": "Beta(1e-4, 1).survival_function(1e-300)",
+   "value": 0.06674569920300699,
+   "reference": 0.06674569920300896,
+   "rel_error": 2.94817759905493e-14,
+   "log_value": -2.7068654151931963,
+   "log_reference": -2.706865415193167
+  },
+  {
+   "call": "Binomial(50, probs=0.01).survival_function(25)",
+   "value": 9.636274128773402e-39,
+   "reference": 9.636274128773452e-39,
+   "rel_error": 5.2790648322193436e-15,
+   "log_value": -87.53528409402074,
+   "log_reference": -87.53528409402074
+  },
+  {
+   "call": "Binomial(1000, probs=0.3).survival_function(600)",
+   "value": 4.054685779969291e-86,
+   "reference": 4.05468577997116e-86,
+   "rel_error": 4.611102982950283e-13,
+   "log_value": -196.6224448024497,
+   "log_reference": -196.62244480244925
+  },
+  {
+   "call": "Exponential(2).survival_function(20)",
+   "value": 4.248354255291595e-18,
+   "reference": 4.248354255291589e-18,
+   "rel_error": 1.4213977345442048e-15,
+   "log_value": -40.0,
+   "log_reference": -40.0
+  }
+ ]
+}

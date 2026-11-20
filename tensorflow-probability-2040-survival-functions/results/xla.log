@@ -1,0 +1,6 @@
+Chi2         XLA == eager: True   XLA vs scipy: True   finite gradients: True
+Gamma        XLA == eager: True   XLA vs scipy: True   finite gradients: True
+Beta         XLA == eager: True   XLA vs scipy: True   finite gradients: True
+Binomial     XLA == eager: True   XLA vs scipy: True   finite gradients: True
+Exponential  XLA == eager: True   XLA vs scipy: True   finite gradients: True
+ALL OK

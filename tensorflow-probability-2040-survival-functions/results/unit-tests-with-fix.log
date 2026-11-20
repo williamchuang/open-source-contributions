@@ -1,0 +1,5 @@
+chi2_test: Ran 46 tests in 3.726s OK (skipped=1) 
+gamma_test: Ran 136 tests in 34.672s OK (skipped=6) 
+beta_test: Ran 151 tests in 13.715s OK (skipped=1) 
+binomial_test: Ran 114 tests in 18.201s OK (skipped=5) 
+exponential_test: Ran 58 tests in 21.195s OK (skipped=1) 

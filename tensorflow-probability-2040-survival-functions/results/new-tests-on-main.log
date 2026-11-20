@@ -1,0 +1,11 @@
+chi2_test: Ran 46 tests in 4.046s FAILED (failures=3, skipped=1) 
+    FAIL: testChi2SurvivalFunctionUpperTail
+gamma_test: Ran 136 tests in 35.294s FAILED (failures=6, skipped=6) 
+    FAIL: testGammaSurvivalFunctionGradientsBeyondSupport
+    FAIL: testGammaSurvivalFunctionUpperTail
+beta_test: Ran 151 tests in 13.047s FAILED (failures=3, skipped=1) 
+    FAIL: testBetaSurvivalFunctionUpperTail
+binomial_test: Ran 114 tests in 17.723s FAILED (failures=3, skipped=5) 
+    FAIL: testSurvivalFunctionUpperTail
+exponential_test: Ran 58 tests in 20.578s FAILED (failures=3, skipped=1) 
+    FAIL: testExponentialSurvivalFunctionUpperTail

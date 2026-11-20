@@ -1,0 +1,1195 @@
+{
+ "label": "fixed",
+ "points": {
+  "Chi2[0.5] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d df": -0.0,
+   "d survival_function / d x": -Infinity,
+   "d log_survival_function / d df": -0.0,
+   "d log_survival_function / d x": -Infinity
+  },
+  "Chi2[0.5] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d df": 3.206424739489878e-73,
+   "d survival_function / d x": -2.3193240214476922e+224,
+   "d log_survival_function / d df": 3.206424739489878e-73,
+   "d log_survival_function / d x": -2.3193240214476922e+224
+  },
+  "Chi2[0.5] at x=0.5": {
+   "survival_function": 0.25632205526853913,
+   "log_survival_function": -1.3613205967645208,
+   "d survival_function / d df": 0.4887715637355802,
+   "d survival_function / d x": -0.30378078659502494,
+   "d log_survival_function / d df": 1.9068650304926444,
+   "d log_survival_function / d x": -1.1851527418378611
+  },
+  "Chi2[0.5] at x=3.0": {
+   "survival_function": 0.03341644415897894,
+   "log_survival_function": -3.398707160069908,
+   "d survival_function / d df": 0.0836279016237622,
+   "d survival_function / d x": -0.022702765440569914,
+   "d log_survival_function / d df": 2.502597260974326,
+   "d log_survival_function / d x": -0.6793890257312049
+  },
+  "Chi2[0.5] at x=50.0": {
+   "survival_function": 3.329834727649937e-13,
+   "log_survival_function": -28.730683537498273,
+   "d survival_function / d df": 1.2459965299911686e-12,
+   "d survival_function / d x": -1.7130572420015543e-13,
+   "d log_survival_function / d df": 3.7419170376379096,
+   "d log_survival_function / d x": -0.5144571373998977
+  },
+  "Chi2[1.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d df": -0.0,
+   "d survival_function / d x": -Infinity,
+   "d log_survival_function / d df": -0.0,
+   "d log_survival_function / d x": -Infinity
+  },
+  "Chi2[1.0] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d df": 2.7587064745550722e-148,
+   "d survival_function / d x": -3.989422804014367e+149,
+   "d log_survival_function / d df": 2.7587064745550722e-148,
+   "d log_survival_function / d x": -3.989422804014367e+149
+  },
+  "Chi2[1.0] at x=0.5": {
+   "survival_function": 0.47950012218695337,
+   "log_survival_function": -0.7350111298370846,
+   "d survival_function / d df": 0.3989736583916115,
+   "d survival_function / d x": -0.4393912894677224,
+   "d log_survival_function / d df": 0.8320616407185288,
+   "d log_survival_function / d x": -0.9163528206493493
+  },
+  "Chi2[1.0] at x=3.0": {
+   "survival_function": 0.08326451666355042,
+   "log_survival_function": -2.4857327909860794,
+   "d survival_function / d df": 0.11509717100868026,
+   "d survival_function / d x": -0.05139344326792309,
+   "d log_survival_function / d df": 1.3823075617403398,
+   "d log_survival_function / d x": -0.6172310286215942
+  },
+  "Chi2[1.0] at x=50.0": {
+   "survival_function": 1.537459794428033e-12,
+   "log_survival_function": -27.200889545537436,
+   "d survival_function / d df": 4.012940470610564e-12,
+   "d survival_function / d x": -7.835433265508671e-13,
+   "d log_survival_function / d df": 2.6101108368192882,
+   "d log_survival_function / d x": -0.509635002743185
+  },
+  "Chi2[2.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d df": -0.0,
+   "d survival_function / d x": NaN,
+   "d log_survival_function / d df": -0.0,
+   "d log_survival_function / d x": NaN
+  },
+  "Chi2[2.0] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d df": 1.7297286485346197e-298,
+   "d survival_function / d x": -0.5,
+   "d log_survival_function / d df": 1.7297286485346197e-298,
+   "d log_survival_function / d x": -0.5
+  },
+  "Chi2[2.0] at x=0.5": {
+   "survival_function": 0.7788007830714049,
+   "log_survival_function": -0.25,
+   "d survival_function / d df": 0.20708575613124497,
+   "d survival_function / d x": -0.38940039153570244,
+   "d log_survival_function / d df": 0.26590337430651784,
+   "d log_survival_function / d x": -0.49999999999999994
+  },
+  "Chi2[2.0] at x=3.0": {
+   "survival_function": 0.22313016014842982,
+   "log_survival_function": -1.5,
+   "d survival_function / d df": 0.15964265033153463,
+   "d survival_function / d x": -0.11156508007421491,
+   "d log_survival_function / d df": 0.7154687211506403,
+   "d log_survival_function / d x": -0.5
+  },
+  "Chi2[2.0] at x=50.0": {
+   "survival_function": 1.3887943864964e-11,
+   "log_survival_function": -25.0,
+   "d survival_function / d df": 2.662739774586182e-11,
+   "d survival_function / d x": -6.9439719324820104e-12,
+   "d log_survival_function / d df": 1.9173030943073188,
+   "d log_survival_function / d x": -0.5000000000000008
+  },
+  "Chi2[5.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d df": -0.0,
+   "d survival_function / d x": -0.0,
+   "d log_survival_function / d df": -0.0,
+   "d log_survival_function / d x": -0.0
+  },
+  "Chi2[5.0] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d df": -0.0,
+   "d survival_function / d x": -0.0,
+   "d log_survival_function / d df": -0.0,
+   "d log_survival_function / d x": -0.0
+  },
+  "Chi2[5.0] at x=0.5": {
+   "survival_function": 0.9921232932326296,
+   "log_survival_function": -0.007907891887427021,
+   "d survival_function / d df": 0.00988692241281517,
+   "d survival_function / d x": -0.03661594078897687,
+   "d log_survival_function / d df": 0.009965417080976566,
+   "d log_survival_function / d x": -0.036906643598369065
+  },
+  "Chi2[5.0] at x=3.0": {
+   "survival_function": 0.6999858358786275,
+   "log_survival_function": -0.3566951786025554,
+   "d survival_function / d df": 0.12608770021181395,
+   "d survival_function / d x": -0.15418032980376925,
+   "d log_survival_function / d df": 0.1801289308283613,
+   "d log_survival_function / d x": -0.22026207088925012
+  },
+  "Chi2[5.0] at x=50.0": {
+   "survival_function": 1.3857973367009573e-09,
+   "log_survival_function": -20.39699016858662,
+   "d survival_function / d df": 1.7713356154975721e-09,
+   "d survival_function / d x": -6.529527721257223e-10,
+   "d log_survival_function / d df": 1.2782068261975674,
+   "d log_survival_function / d x": -0.47117479218148023
+  },
+  "Gamma[0.5, 2.0] at x=-2.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma[0.5, 2.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma[0.5, 2.0] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 1.1012703840870997e-147,
+   "d survival_function / d rate": -3.9894228040143596e-151,
+   "d survival_function / d x": -7.978845608028719e+149,
+   "d log_survival_function / d concentration": 1.1012703840870997e-147,
+   "d log_survival_function / d rate": -3.9894228040143596e-151,
+   "d log_survival_function / d x": -7.978845608028719e+149
+  },
+  "Gamma[0.5, 2.0] at x=0.7": {
+   "survival_function": 0.09426430684121058,
+   "log_survival_function": -2.361652667450254,
+   "d survival_function / d concentration": 0.25586897703044176,
+   "d survival_function / d rate": -0.08230890255356228,
+   "d survival_function / d x": -0.23516829301017797,
+   "d log_survival_function / d concentration": 2.714378173505867,
+   "d log_survival_function / d rate": -0.8731714613062681,
+   "d log_survival_function / d x": -2.4947756037321946
+  },
+  "Gamma[0.5, 2.0] at x=30.0": {
+   "survival_function": 6.326068263677272e-28,
+   "log_survival_function": -62.627703688037876,
+   "d survival_function / d concentration": 3.842531712630064e-27,
+   "d survival_function / d rate": -1.913382418249342e-26,
+   "d survival_function / d x": -1.2755882788328946e-27,
+   "d log_survival_function / d concentration": 6.074123061069283,
+   "d log_survival_function / d rate": -30.245997015800686,
+   "d log_survival_function / d x": -2.016399801053379
+  },
+  "Gamma[1.0, 1.0] at x=-2.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma[1.0, 1.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma[1.0, 1.0] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 6.911983122333285e-298,
+   "d survival_function / d rate": -1e-300,
+   "d survival_function / d x": -1.0,
+   "d log_survival_function / d concentration": 6.911983122333285e-298,
+   "d log_survival_function / d rate": -1e-300,
+   "d log_survival_function / d x": -1.0
+  },
+  "Gamma[1.0, 1.0] at x=0.7": {
+   "survival_function": 0.4965853037914095,
+   "log_survival_function": -0.7,
+   "d survival_function / d concentration": 0.4832861241511981,
+   "d survival_function / d rate": -0.34760971265398666,
+   "d survival_function / d x": -0.4965853037914095,
+   "d log_survival_function / d concentration": 0.973218740992388,
+   "d log_survival_function / d rate": -0.7,
+   "d log_survival_function / d x": -1.0
+  },
+  "Gamma[1.0, 1.0] at x=30.0": {
+   "survival_function": 9.357622968840163e-14,
+   "log_survival_function": -30.0,
+   "d survival_function / d concentration": 3.753064450512662e-13,
+   "d survival_function / d rate": -2.8072868906520526e-12,
+   "d survival_function / d x": -9.357622968840175e-14,
+   "d log_survival_function / d concentration": 4.010702785322668,
+   "d log_survival_function / d rate": -30.000000000000032,
+   "d log_survival_function / d x": -1.000000000000001
+  },
+  "Gamma[3.0, 0.5] at x=-2.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma[3.0, 0.5] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma[3.0, 0.5] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": -0.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": -0.0,
+   "d log_survival_function / d concentration": -0.0,
+   "d log_survival_function / d rate": -0.0,
+   "d log_survival_function / d x": -0.0
+  },
+  "Gamma[3.0, 0.5] at x=0.7": {
+   "survival_function": 0.9944910666155343,
+   "log_survival_function": -0.005524163518265289,
+   "d survival_function / d concentration": 0.0128284828822233,
+   "d survival_function / d rate": -0.030213501846689823,
+   "d survival_function / d x": -0.02158107274763559,
+   "d log_survival_function / d concentration": 0.012899545619732281,
+   "d log_survival_function / d rate": -0.03038086802480069,
+   "d log_survival_function / d x": -0.02170062001771478
+  },
+  "Gamma[3.0, 0.5] at x=30.0": {
+   "survival_function": 3.930844818448459e-05,
+   "log_survival_function": -10.144071095664726,
+   "d survival_function / d concentration": 7.294833795277504e-05,
+   "d survival_function / d rate": -0.0010324203316936628,
+   "d survival_function / d x": -1.7207005528227713e-05,
+   "d log_survival_function / d concentration": 1.8557928720668355,
+   "d log_survival_function / d rate": -26.264591439688754,
+   "d log_survival_function / d x": -0.4377431906614792
+  },
+  "Gamma(log_rate)[0.5, 0.3] at x=-2.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d log_rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d log_rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma(log_rate)[0.5, 0.3] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d log_rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d log_rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma(log_rate)[0.5, 0.3] at x=0.7": {
+   "survival_function": 0.1692242184893834,
+   "log_survival_function": -1.776530706772847,
+   "d survival_function / d concentration": 0.41291271229235454,
+   "d survival_function / d log_rate": -0.21318315924950948,
+   "d survival_function / d x": -0.30454737035644214,
+   "d log_survival_function / d concentration": 2.440033205520517,
+   "d log_survival_function / d log_rate": -1.2597674325373465,
+   "d log_survival_function / d x": -1.7996677607676381
+  },
+  "Gamma(log_rate)[0.5, 0.3] at x=30.0": {
+   "survival_function": 2.2668737619646993e-19,
+   "log_survival_function": -42.93071508197384,
+   "d survival_function / d concentration": 1.2895213545891009e-18,
+   "d survival_function / d log_rate": -9.29058195955854e-18,
+   "d survival_function / d x": -3.09686065318618e-19,
+   "d log_survival_function / d concentration": 5.6885450624805545,
+   "d log_survival_function / d log_rate": -40.984117048963476,
+   "d log_survival_function / d x": -1.3661372349654493
+  },
+  "Gamma(log_rate)[1.0, 0.0] at x=-2.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d log_rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d log_rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma(log_rate)[1.0, 0.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d log_rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d log_rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma(log_rate)[1.0, 0.0] at x=0.7": {
+   "survival_function": 0.4965853037914095,
+   "log_survival_function": -0.7,
+   "d survival_function / d concentration": 0.4832861241511981,
+   "d survival_function / d log_rate": -0.34760971265398666,
+   "d survival_function / d x": -0.4965853037914095,
+   "d log_survival_function / d concentration": 0.973218740992388,
+   "d log_survival_function / d log_rate": -0.7,
+   "d log_survival_function / d x": -1.0
+  },
+  "Gamma(log_rate)[1.0, 0.0] at x=30.0": {
+   "survival_function": 9.357622968840163e-14,
+   "log_survival_function": -30.0,
+   "d survival_function / d concentration": 3.753064450512662e-13,
+   "d survival_function / d log_rate": -2.8072868906520526e-12,
+   "d survival_function / d x": -9.357622968840175e-14,
+   "d log_survival_function / d concentration": 4.010702785322668,
+   "d log_survival_function / d log_rate": -30.000000000000032,
+   "d log_survival_function / d x": -1.000000000000001
+  },
+  "Gamma(log_rate)[3.0, -1.0] at x=-2.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d log_rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d log_rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma(log_rate)[3.0, -1.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration": 0.0,
+   "d survival_function / d log_rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration": 0.0,
+   "d log_survival_function / d log_rate": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Gamma(log_rate)[3.0, -1.0] at x=0.7": {
+   "survival_function": 0.9976507515445246,
+   "log_survival_function": -0.0023520122690664745,
+   "d survival_function / d concentration": 0.006176992036322955,
+   "d survival_function / d log_rate": -0.006599986857786877,
+   "d survival_function / d x": -0.009428552653981253,
+   "d log_survival_function / d concentration": 0.0061915374962229755,
+   "d log_survival_function / d log_rate": -0.006615528377610131,
+   "d log_survival_function / d x": -0.009450754825157332
+  },
+  "Gamma(log_rate)[3.0, -1.0] at x=30.0": {
+   "survival_function": 0.001174651693836254,
+   "log_survival_function": -6.746783606107958,
+   "d survival_function / d concentration": 0.0018509942274454452,
+   "d survival_function / d log_rate": -0.0108245533088458,
+   "d survival_function / d x": -0.0003608184436281933,
+   "d log_survival_function / d concentration": 1.5757813462136574,
+   "d log_survival_function / d log_rate": -9.215117439191078,
+   "d log_survival_function / d x": -0.3071705813063692
+  },
+  "Beta[0.5, 0.5] at x=-0.5": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[0.5, 0.5] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[0.5, 0.5] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 4.401520564717799e-148,
+   "d survival_function / d concentration0": -8.825424006106036e-151,
+   "d survival_function / d x": -3.1830988618378215e+149,
+   "d log_survival_function / d concentration1": 4.401520564717799e-148,
+   "d log_survival_function / d concentration0": -8.825424006106036e-151,
+   "d log_survival_function / d x": -3.1830988618378215e+149
+  },
+  "Beta[0.5, 0.5] at x=0.3": {
+   "survival_function": 0.6309898804344547,
+   "log_survival_function": -0.46046545391587107,
+   "d survival_function / d concentration1": 0.6428114811572836,
+   "d survival_function / d concentration0": -0.46874458391550566,
+   "d survival_function / d x": -0.6946091180428566,
+   "d log_survival_function / d concentration1": 1.018735008419928,
+   "d log_survival_function / d concentration0": -0.7428717931145924,
+   "d log_survival_function / d x": -1.1008244974778332
+  },
+  "Beta[0.5, 0.5] at x=0.5": {
+   "survival_function": 0.5,
+   "log_survival_function": -0.6931471805599453,
+   "d survival_function / d concentration1": 0.5831218080616374,
+   "d survival_function / d concentration0": -0.5831218080616368,
+   "d survival_function / d x": -0.6366197723675814,
+   "d log_survival_function / d concentration1": 1.1662436161232748,
+   "d log_survival_function / d concentration0": -1.1662436161232737,
+   "d log_survival_function / d x": -1.2732395447351628
+  },
+  "Beta[0.5, 0.5] at x=0.999999": {
+   "survival_function": 0.0006366198784800774,
+   "log_survival_function": -7.359337817590487,
+   "d survival_function / d concentration1": 0.000882542335507043,
+   "d survival_function / d concentration0": -0.009185925720308392,
+   "d survival_function / d x": -318.31004533427654,
+   "d log_survival_function / d concentration1": 1.3862940277864126,
+   "d log_survival_function / d concentration0": -14.429215974593323,
+   "d log_survival_function / d x": -500000.16665241134
+  },
+  "Beta[0.5, 0.5] at x=1.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[0.5, 0.5] at x=1.5": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[1.0, 1.0] at x=-0.5": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[1.0, 1.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[1.0, 1.0] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 6.9077552789823005e-298,
+   "d survival_function / d concentration0": -1.0000000000000236e-300,
+   "d survival_function / d x": -1.0,
+   "d log_survival_function / d concentration1": 6.9077552789823005e-298,
+   "d log_survival_function / d concentration0": -1.0000000000000236e-300,
+   "d log_survival_function / d x": -1.0
+  },
+  "Beta[1.0, 1.0] at x=0.3": {
+   "survival_function": 0.7,
+   "log_survival_function": -0.35667494393873245,
+   "d survival_function / d concentration1": 0.36119184129778087,
+   "d survival_function / d concentration0": -0.2549999999999999,
+   "d survival_function / d x": -1.0,
+   "d log_survival_function / d concentration1": 0.5159883447111155,
+   "d log_survival_function / d concentration0": -0.36428571428571416,
+   "d log_survival_function / d x": -1.4285714285714286
+  },
+  "Beta[1.0, 1.0] at x=0.5": {
+   "survival_function": 0.5,
+   "log_survival_function": -0.6931471805599453,
+   "d survival_function / d concentration1": 0.3749999999999999,
+   "d survival_function / d concentration0": -0.34657359027997275,
+   "d survival_function / d x": -1.0,
+   "d log_survival_function / d concentration1": 0.7499999999999998,
+   "d log_survival_function / d concentration0": -0.6931471805599455,
+   "d log_survival_function / d x": -2.0
+  },
+  "Beta[1.0, 1.0] at x=0.999999": {
+   "survival_function": 1.000000000028756e-06,
+   "log_survival_function": -13.815510557935518,
+   "d survival_function / d concentration1": 9.999995000287558e-07,
+   "d survival_function / d concentration0": -1.3815510558332798e-05,
+   "d survival_function / d x": -1.0,
+   "d log_survival_function / d concentration1": 0.9999994999999997,
+   "d log_survival_function / d concentration0": -13.815510557935518,
+   "d log_survival_function / d x": -999999.9999712439
+  },
+  "Beta[1.0, 1.0] at x=1.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[1.0, 1.0] at x=1.5": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[2.0, 3.0] at x=-0.5": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[2.0, 3.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[2.0, 3.0] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": -1.199999999999962e-299,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": -1.199999999999962e-299
+  },
+  "Beta[2.0, 3.0] at x=0.3": {
+   "survival_function": 0.6517000000000001,
+   "log_survival_function": -0.42817094564380226,
+   "d survival_function / d concentration1": 0.24609372774672356,
+   "d survival_function / d concentration0": -0.12968100000000002,
+   "d survival_function / d x": -1.764,
+   "d log_survival_function / d concentration1": 0.37761811837766385,
+   "d log_survival_function / d concentration0": -0.19898879852692958,
+   "d log_survival_function / d x": -2.706766917293233
+  },
+  "Beta[2.0, 3.0] at x=0.5": {
+   "survival_function": 0.3125,
+   "log_survival_function": -1.1631508098056809,
+   "d survival_function / d concentration1": 0.1885416666666667,
+   "d survival_function / d concentration0": -0.15410849392498296,
+   "d survival_function / d x": -1.5000000000000004,
+   "d log_survival_function / d concentration1": 0.6033333333333335,
+   "d log_survival_function / d concentration0": -0.4931471805599455,
+   "d log_survival_function / d x": -4.800000000000002
+  },
+  "Beta[2.0, 3.0] at x=0.999999": {
+   "survival_function": 3.999997000345084e-18,
+   "log_survival_function": -40.06023806268694,
+   "d survival_function / d concentration1": 4.333327083708368e-18,
+   "d survival_function / d concentration0": -5.426200178989156e-17,
+   "d survival_function / d x": -1.1999988000690182e-11,
+   "d log_survival_function / d concentration1": 1.0833325833330694,
+   "d log_survival_function / d concentration0": -13.565510620435546,
+   "d log_survival_function / d x": -2999999.2499131705
+  },
+  "Beta[2.0, 3.0] at x=1.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[2.0, 3.0] at x=1.5": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[50.0, 200.0] at x=-0.5": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[50.0, 200.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[50.0, 200.0] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[50.0, 200.0] at x=0.3": {
+   "survival_function": 0.00015073176238932754,
+   "log_survival_function": -8.800008708850823,
+   "d survival_function / d concentration1": 6.598532674589187e-05,
+   "d survival_function / d concentration0": -2.1672990006175812e-05,
+   "d survival_function / d x": -0.019281211493188927,
+   "d log_survival_function / d concentration1": 0.4377665708933814,
+   "d log_survival_function / d concentration0": -0.14378515624461613,
+   "d log_survival_function / d x": -127.91737579095752
+  },
+  "Beta[50.0, 200.0] at x=0.5": {
+   "survival_function": 3.930291809058172e-23,
+   "log_survival_function": -51.590743464069654,
+   "d survival_function / d concentration1": 3.658342072459115e-23,
+   "d survival_function / d concentration0": -1.8710987091446438e-23,
+   "d survival_function / d x": -1.1919113341841933e-20,
+   "d log_survival_function / d concentration1": 0.9308067314563534,
+   "d log_survival_function / d concentration0": -0.4760711926865861,
+   "d log_survival_function / d x": -303.26280899478934
+  },
+  "Beta[50.0, 200.0] at x=0.999999": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": NaN,
+   "d log_survival_function / d concentration0": NaN,
+   "d log_survival_function / d x": NaN
+  },
+  "Beta[50.0, 200.0] at x=1.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Beta[50.0, 200.0] at x=1.5": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d concentration1": 0.0,
+   "d survival_function / d concentration0": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d concentration1": 0.0,
+   "d log_survival_function / d concentration0": -0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[10.0, 0.3] at x=-1.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[10.0, 0.3] at x=0.0": {
+   "survival_function": 0.9717524751,
+   "log_survival_function": -0.02865416219876478,
+   "d survival_function / d total_count": 0.010075184360115447,
+   "d survival_function / d probs": 0.40353607000000036,
+   "d survival_function / d x": -0.07483559038175686,
+   "d log_survival_function / d total_count": 0.010368056288283332,
+   "d log_survival_function / d probs": 0.4152663155897532,
+   "d log_survival_function / d x": -0.07701095937425398
+  },
+  "Binomial[10.0, 0.3] at x=1.0": {
+   "survival_function": 0.8506916540999998,
+   "log_survival_function": -0.16170554967496598,
+   "d survival_function / d total_count": 0.041148463803467365,
+   "d survival_function / d probs": 1.556496270000002,
+   "d survival_function / d x": -0.18274949310045055,
+   "d log_survival_function / d total_count": 0.048370597742610884,
+   "d log_survival_function / d probs": 1.8296832495044486,
+   "d log_survival_function / d x": -0.21482459857184413
+  },
+  "Binomial[10.0, 0.3] at x=9.0": {
+   "survival_function": 5.904900000000006e-06,
+   "log_survival_function": -12.039728043259359,
+   "d survival_function / d total_count": 1.568483737012987e-05,
+   "d survival_function / d probs": 0.00019683000000000002,
+   "d survival_function / d x": -2.2794176382394095e-05,
+   "d log_survival_function / d total_count": 2.656240981240979,
+   "d log_survival_function / d probs": 33.33333333333331,
+   "d log_survival_function / d x": -3.8602137855669145
+  },
+  "Binomial[10.0, 0.3] at x=10.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[10.0, 0.3] at x=49.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[10.0, 0.3] at x=50.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[10.0, 0.3] at x=60.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[1.0, 0.5] at x=-1.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[1.0, 0.5] at x=0.0": {
+   "survival_function": 0.5,
+   "log_survival_function": -0.6931471805599453,
+   "d survival_function / d total_count": 0.34657359027997275,
+   "d survival_function / d probs": 1.0,
+   "d survival_function / d x": -0.7215735902799727,
+   "d log_survival_function / d total_count": 0.6931471805599455,
+   "d log_survival_function / d probs": 2.0,
+   "d log_survival_function / d x": -1.4431471805599454
+  },
+  "Binomial[1.0, 0.5] at x=1.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[1.0, 0.5] at x=9.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[1.0, 0.5] at x=10.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[1.0, 0.5] at x=49.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[1.0, 0.5] at x=50.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[1.0, 0.5] at x=60.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[50.0, 0.01] at x=-1.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[50.0, 0.01] at x=0.0": {
+   "survival_function": 0.3949939328624665,
+   "log_survival_function": -0.9288848740408358,
+   "d survival_function / d total_count": 0.006080514168138116,
+   "d survival_function / d probs": 30.555861976643246,
+   "d survival_function / d x": -0.4926834324227956,
+   "d log_survival_function / d total_count": 0.015393943203313198,
+   "d log_survival_function / d probs": 77.35780080268356,
+   "d log_survival_function / d x": -1.247318987540864
+  },
+  "Binomial[50.0, 0.01] at x=1.0": {
+   "survival_function": 0.08943531309603052,
+   "log_survival_function": -2.4142396737208887,
+   "d survival_function / d total_count": 0.0030403085243946126,
+   "d survival_function / d probs": 15.123608453086078,
+   "d survival_function / d x": -0.15170613441827735,
+   "d log_survival_function / d total_count": 0.03399449746578405,
+   "d log_survival_function / d probs": 169.10108467834414,
+   "d log_survival_function / d x": -1.6962665994737893
+  },
+  "Binomial[50.0, 0.01] at x=9.0": {
+   "survival_function": 7.13281159629845e-11,
+   "log_survival_function": -23.363730532955543,
+   "d survival_function / d total_count": 1.5090048572668836e-11,
+   "d survival_function / d probs": 6.871863991901829e-08,
+   "d survival_function / d x": -2.3181064673566111e-10,
+   "d log_survival_function / d total_count": 0.21155821051687065,
+   "d log_survival_function / d probs": 963.4158843432738,
+   "d log_survival_function / d x": -3.2499196650022064
+  },
+  "Binomial[50.0, 0.01] at x=10.0": {
+   "survival_function": 2.6094760439671404e-12,
+   "log_survival_function": -26.67187166418469,
+   "d survival_function / d total_count": 6.170808875571674e-13,
+   "d survival_function / d probs": 2.7765107037987564e-09,
+   "d survival_function / d x": -8.781204061538358e-12,
+   "d log_survival_function / d total_count": 0.2364769314452223,
+   "d log_survival_function / d probs": 1064.0108040914129,
+   "d log_survival_function / d x": -3.3651215468483273
+  },
+  "Binomial[50.0, 0.01] at x=49.0": {
+   "survival_function": 1.0000000000000174e-100,
+   "log_survival_function": -230.25850929940455,
+   "d survival_function / d total_count": 4.4894014167609087e-100,
+   "d survival_function / d probs": 5.000000000000171e-97,
+   "d survival_function / d x": -9.094571602749113e-100,
+   "d log_survival_function / d total_count": 4.48940141676083,
+   "d log_survival_function / d probs": 5000.000000000084,
+   "d log_survival_function / d x": -9.094571602748955
+  },
+  "Binomial[50.0, 0.01] at x=50.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial[50.0, 0.01] at x=60.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d probs": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d probs": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial(logits)[10.0, -0.8] at x=-1.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d logits": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d logits": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial(logits)[10.0, -0.8] at x=0.0": {
+   "survival_function": 0.9755471048609898,
+   "log_survival_function": -0.024756832169889977,
+   "d survival_function / d total_count": 0.009074485670437834,
+   "d survival_function / d logits": 0.07581021503403695,
+   "d survival_function / d x": -0.06535817230875275,
+   "d log_survival_function / d total_count": 0.009301945160024742,
+   "d log_survival_function / d logits": 0.07771046078276202,
+   "d log_survival_function / d x": -0.06699642896081982
+  },
+  "Binomial(logits)[10.0, -0.8] at x=9.0": {
+   "survival_function": 8.203032463156887e-06,
+   "log_survival_function": -11.711006659477777,
+   "d survival_function / d total_count": 2.171446767475092e-05,
+   "d survival_function / d logits": 5.659883067439631e-05,
+   "d survival_function / d x": -3.1321044455145186e-05,
+   "d log_survival_function / d total_count": 2.6471268731751723,
+   "d log_survival_function / d logits": 6.89974481127612,
+   "d log_survival_function / d x": -3.818227539122949
+  },
+  "Binomial(logits)[10.0, -0.8] at x=10.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d logits": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d logits": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial(logits)[10.0, -0.8] at x=49.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d logits": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d logits": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial(logits)[10.0, -0.8] at x=50.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d logits": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d logits": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial(logits)[50.0, -4.6] at x=-1.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d logits": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d logits": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Binomial(logits)[50.0, -4.6] at x=0.0": {
+   "survival_function": 0.3935194393383999,
+   "log_survival_function": -0.9326248112307701,
+   "d survival_function / d total_count": 0.006065807546253825,
+   "d survival_function / d logits": 0.301778718791666,
+   "d survival_function / d x": -0.4925089207886233,
+   "d log_survival_function / d total_count": 0.015414251342835554,
+   "d log_survival_function / d logits": 0.766871185065287,
+   "d log_survival_function / d x": -1.2515491524806204
+  },
+  "Binomial(logits)[50.0, -4.6] at x=9.0": {
+   "survival_function": 6.808379208171528e-11,
+   "log_survival_function": -23.410281932836916,
+   "d survival_function / d total_count": 1.4406676722713444e-11,
+   "d survival_function / d logits": 6.495219417236384e-10,
+   "d survival_function / d x": -2.2159762447829128e-10,
+   "d log_survival_function / d total_count": 0.21160214909037847,
+   "d log_survival_function / d logits": 9.540037678043426,
+   "d log_survival_function / d x": -3.2547779391066554
+  },
+  "Binomial(logits)[50.0, -4.6] at x=10.0": {
+   "survival_function": 2.478709122278576e-12,
+   "log_survival_function": -26.723283206476978,
+   "d survival_function / d total_count": 5.86267477854565e-13,
+   "d survival_function / d logits": 2.6115551482966157e-11,
+   "d survival_function / d x": -8.353208592675325e-12,
+   "d log_survival_function / d total_count": 0.2365212894829843,
+   "d log_survival_function / d logits": 10.535948429059395,
+   "d log_survival_function / d x": -3.369983398857451
+  },
+  "Binomial(logits)[50.0, -4.6] at x=49.0": {
+   "survival_function": 7.85391229848617e-101,
+   "log_survival_function": -230.50008260278258,
+   "d survival_function / d total_count": 3.5259736121419795e-100,
+   "d survival_function / d logits": 3.887875859705795e-99,
+   "d survival_function / d x": -7.146628479254151e-100,
+   "d log_survival_function / d total_count": 4.489448669832493,
+   "d log_survival_function / d logits": 49.502409906654776,
+   "d log_survival_function / d x": -9.09945032188818
+  },
+  "Binomial(logits)[50.0, -4.6] at x=50.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -Infinity,
+   "d survival_function / d total_count": 0.0,
+   "d survival_function / d logits": 0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d total_count": 0.0,
+   "d log_survival_function / d logits": 0.0,
+   "d log_survival_function / d x": 0.0
+  },
+  "Exponential[0.5] at x=-1.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.5,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d rate": 1.0,
+   "d log_survival_function / d x": -0.5
+  },
+  "Exponential[0.5] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d rate": 0.0,
+   "d log_survival_function / d x": -0.5
+  },
+  "Exponential[0.5] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d rate": -1e-300,
+   "d survival_function / d x": -0.5,
+   "d log_survival_function / d rate": 0.0,
+   "d log_survival_function / d x": -0.5
+  },
+  "Exponential[0.5] at x=3.0": {
+   "survival_function": 0.22313016014842982,
+   "log_survival_function": -1.5,
+   "d survival_function / d rate": -0.6693904804452895,
+   "d survival_function / d x": -0.11156508007421491,
+   "d log_survival_function / d rate": -3.0,
+   "d log_survival_function / d x": -0.5
+  },
+  "Exponential[0.5] at x=600.0": {
+   "survival_function": 5.148200222411903e-131,
+   "log_survival_function": -300.0,
+   "d survival_function / d rate": -3.088920133447208e-128,
+   "d survival_function / d x": -2.5741001112060067e-131,
+   "d log_survival_function / d rate": -600.0,
+   "d log_survival_function / d x": -0.5
+  },
+  "Exponential[2.0] at x=-1.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 2.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d rate": 1.0,
+   "d log_survival_function / d x": -2.0
+  },
+  "Exponential[2.0] at x=0.0": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": 0.0,
+   "d log_survival_function / d rate": 0.0,
+   "d log_survival_function / d x": -2.0
+  },
+  "Exponential[2.0] at x=1e-300": {
+   "survival_function": 1.0,
+   "log_survival_function": 0.0,
+   "d survival_function / d rate": -1e-300,
+   "d survival_function / d x": -2.0,
+   "d log_survival_function / d rate": 0.0,
+   "d log_survival_function / d x": -2.0
+  },
+  "Exponential[2.0] at x=3.0": {
+   "survival_function": 0.002478752176666357,
+   "log_survival_function": -6.0,
+   "d survival_function / d rate": -0.0074362565299990755,
+   "d survival_function / d x": -0.004957504353332717,
+   "d log_survival_function / d rate": -3.0,
+   "d log_survival_function / d x": -2.0
+  },
+  "Exponential[2.0] at x=600.0": {
+   "survival_function": 0.0,
+   "log_survival_function": -1200.0,
+   "d survival_function / d rate": -0.0,
+   "d survival_function / d x": -0.0,
+   "d log_survival_function / d rate": -600.0,
+   "d log_survival_function / d x": -2.0
+  }
+ }
+}
