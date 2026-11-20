@@ -1,0 +1,37 @@
+<decompilertest>
+<!-- Reporter's examples from GitHub issue #9728, plus framefunc (genuine push {r7,lr} with a frame pointer).
+     Only some_function has a prototype, as in the original report. The single stringmatch
+     always passes: this file is used to print the decompiled C (DUMPOUT=1), not to grade it.
+     Assembly source: bug-cases.s -->
+<binaryimage arch="ARM:LE:32:v8:default">
+<bytechunk space="ram" offset="0x10000" readonly="true">80b501200090684600f0faff01bd</bytechunk>
+<bytechunk space="ram" offset="0x10100" readonly="true">8cb501200090684601a902aa00f078ff07bd</bytechunk>
+<bytechunk space="ram" offset="0x10200" readonly="true">e0b5684600f0fcfe03b000bd</bytechunk>
+<bytechunk space="ram" offset="0x10300" readonly="true">80b500af00f07cfe00bf80bd</bytechunk>
+<bytechunk space="ram" offset="0x11000" readonly="true">7047</bytechunk>
+<symbol space="ram" offset="0x10000" name="my_function"/>
+<symbol space="ram" offset="0x10100" name="my_function2"/>
+<symbol space="ram" offset="0x10200" name="my_function3"/>
+<symbol space="ram" offset="0x10300" name="framefunc"/>
+<symbol space="ram" offset="0x11000" name="some_function"/>
+</binaryimage>
+<script>
+<com>option readonly on</com>
+<com>set context TMode 1 [ram,0x10000] [ram,0x11002]</com>
+<com>parse line extern void some_function(int4 *ptr);</com>
+<com>lo fu my_function</com>
+<com>decompile</com>
+<com>print C</com>
+<com>lo fu my_function2</com>
+<com>decompile</com>
+<com>print C</com>
+<com>lo fu my_function3</com>
+<com>decompile</com>
+<com>print C</com>
+<com>lo fu framefunc</com>
+<com>decompile</com>
+<com>print C</com>
+<com>quit</com>
+</script>
+<stringmatch name="print only" min="0" max="100">some_function</stringmatch>
+</decompilertest>

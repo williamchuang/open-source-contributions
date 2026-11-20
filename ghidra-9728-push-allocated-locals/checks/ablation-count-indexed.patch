@@ -1,0 +1,12 @@
+diff --git a/Ghidra/Features/Decompiler/src/decompile/cpp/coreaction.cc b/Ghidra/Features/Decompiler/src/decompile/cpp/coreaction.cc
+index cd69fe1c..1989be39 100644
+--- a/Ghidra/Features/Decompiler/src/decompile/cpp/coreaction.cc
++++ b/Ghidra/Features/Decompiler/src/decompile/cpp/coreaction.cc
+@@ -2080,7 +2080,6 @@ void ActionRestrictLocal::collectDirectAlias(Funcdata &data,AddrSpace *spc,vecto
+   aliasCheck.gather(&data,spc,false);
+   const vector<AliasChecker::AddBase> &addBase( aliasCheck.getAddBase() );
+   for(int4 i=0;i<addBase.size();++i) {
+-    if (addBase[i].index != (Varnode *)0) continue;
+     uintb offset = AliasChecker::gatherOffset(addBase[i].base);
+     alias.push_back(AddrSpace::addressToByte(offset,spc->getWordSize()));
+   }

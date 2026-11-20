@@ -1,0 +1,30 @@
+<decompilertest>
+<!-- The reporter's second example (my_function2) from GitHub issue #9728, with the reporter's prototypes:
+     int my_function2(void) and a three-pointer some_function. The third pointer, sp+8, points at the
+     slot written by the push of r7. (The bytes are the same as in bug-cases.xml.) The single stringmatch
+     always passes: this file is used to print the decompiled C (DUMPOUT=1), not to grade it.
+     Assembly source: bug-cases.s -->
+<binaryimage arch="ARM:LE:32:v8:default">
+<bytechunk space="ram" offset="0x10000" readonly="true">80b501200090684600f0faff01bd</bytechunk>
+<bytechunk space="ram" offset="0x10100" readonly="true">8cb501200090684601a902aa00f078ff07bd</bytechunk>
+<bytechunk space="ram" offset="0x10200" readonly="true">e0b5684600f0fcfe03b000bd</bytechunk>
+<bytechunk space="ram" offset="0x10300" readonly="true">80b500af00f07cfe00bf80bd</bytechunk>
+<bytechunk space="ram" offset="0x11000" readonly="true">7047</bytechunk>
+<symbol space="ram" offset="0x10000" name="my_function"/>
+<symbol space="ram" offset="0x10100" name="my_function2"/>
+<symbol space="ram" offset="0x10200" name="my_function3"/>
+<symbol space="ram" offset="0x10300" name="framefunc"/>
+<symbol space="ram" offset="0x11000" name="some_function"/>
+</binaryimage>
+<script>
+<com>option readonly on</com>
+<com>set context TMode 1 [ram,0x10000] [ram,0x11002]</com>
+<com>parse line extern void some_function(int4 *a,int4 *b,int4 *c);</com>
+<com>parse line extern int4 my_function2(void);</com>
+<com>lo fu my_function2</com>
+<com>decompile</com>
+<com>print C</com>
+<com>quit</com>
+</script>
+<stringmatch name="print only" min="0" max="100">some_function</stringmatch>
+</decompilertest>

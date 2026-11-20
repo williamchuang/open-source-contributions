@@ -1,0 +1,30 @@
+xunknown4 my_function(void)
+{
+  int4 aiStack_208 [128];
+  
+  some_function(aiStack_208 + 0x80);
+  return 1;
+}
+xunknown8 my_function2(void)
+{
+  xunknown4 in_r3;
+  int4 iStack_10;
+  xunknown4 xStack_c;
+  
+  iStack_10 = 1;
+  xStack_c = in_r3;
+  some_function(&iStack_10);
+  return CONCAT44(xStack_c,iStack_10);
+}
+void my_function3(void)
+{
+  int4 aiStack_210 [128];
+  
+  some_function(aiStack_210 + 0x80);
+  return;
+}
+void framefunc(int4 *param_1)
+{
+  some_function(param_1);
+  return;
+}

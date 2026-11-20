@@ -1,0 +1,42 @@
+<decompilertest>
+<!-- Five ordinary ARM Thumb prologues that the fix must leave unchanged: GCC -O0 frame pointer, a frame pointer onto the r7 save slot, a sub sp buffer with callee-saved r4/r5, a callee-saved r4, and push {r4-r7,lr} with add r7,sp,#12.
+     Only some_function has a prototype, as in the original report. The single stringmatch
+     always passes: this file is used to print the decompiled C (DUMPOUT=1), not to grade it.
+     Assembly source: prologues.s -->
+<binaryimage arch="ARM:LE:32:v8:default">
+<bytechunk space="ram" offset="0x20000" readonly="true">80b582b000af7860786801307860381d00f0f6ff78680837bd4680bd</bytechunk>
+<bytechunk space="ram" offset="0x20100" readonly="true">80b500af00f07cff00bf80bd</bytechunk>
+<bytechunk space="ram" offset="0x20200" readonly="true">30b583b00446684600f0fafe0098001903b030bd</bytechunk>
+<bytechunk space="ram" offset="0x20300" readonly="true">10b5040000f07cfe001910bd</bytechunk>
+<bytechunk space="ram" offset="0x20400" readonly="true">f0b503af85b0044601a800f0f9fd0198001905b0f0bd</bytechunk>
+<bytechunk space="ram" offset="0x21000" readonly="true">7047</bytechunk>
+<symbol space="ram" offset="0x20000" name="prologue1"/>
+<symbol space="ram" offset="0x20100" name="prologue2"/>
+<symbol space="ram" offset="0x20200" name="prologue3"/>
+<symbol space="ram" offset="0x20300" name="prologue4"/>
+<symbol space="ram" offset="0x20400" name="prologue5"/>
+<symbol space="ram" offset="0x21000" name="some_function"/>
+</binaryimage>
+<script>
+<com>option readonly on</com>
+<com>set context TMode 1 [ram,0x20000] [ram,0x21002]</com>
+<com>parse line extern void some_function(int4 *ptr);</com>
+<com>lo fu prologue1</com>
+<com>decompile</com>
+<com>print C</com>
+<com>lo fu prologue2</com>
+<com>decompile</com>
+<com>print C</com>
+<com>lo fu prologue3</com>
+<com>decompile</com>
+<com>print C</com>
+<com>lo fu prologue4</com>
+<com>decompile</com>
+<com>print C</com>
+<com>lo fu prologue5</com>
+<com>decompile</com>
+<com>print C</com>
+<com>quit</com>
+</script>
+<stringmatch name="print only" min="0" max="100">some_function</stringmatch>
+</decompilertest>

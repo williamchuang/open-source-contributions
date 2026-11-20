@@ -1,0 +1,11 @@
+FAIL -- Escaped stack slot #1
+FAIL -- Escaped stack slot #2
+FAIL -- Escaped stack slot #3
+FAIL -- Escaped stack slot #4
+Success -- Escaped stack slot #5
+FAIL -- Escaped stack slot #6
+FAIL -- Escaped stack slot #7
+Success -- Escaped stack slot #8
+Success -- Escaped stack slot #9
+Total tests applied = 9
+Total passing tests = 3

@@ -1,0 +1,22 @@
+diff --git a/Ghidra/Features/Decompiler/src/decompile/cpp/testfunction.cc b/Ghidra/Features/Decompiler/src/decompile/cpp/testfunction.cc
+index 6b5b7165..71473bf2 100644
+--- a/Ghidra/Features/Decompiler/src/decompile/cpp/testfunction.cc
++++ b/Ghidra/Features/Decompiler/src/decompile/cpp/testfunction.cc
+@@ -14,6 +14,8 @@
+  * limitations under the License.
+  */
+ #include "ifacedecomp.hh"
++#include <cstdlib>
++#include <iostream>
+ 
+ namespace ghidra {
+ 
+@@ -328,6 +330,8 @@ void FunctionTestCollection::runTests(list<string> &lateStream)
+     return;
+   }
+   string result = bulkout.str();
++  if (std::getenv("DUMPOUT") != (char *)0)	// Print the decompiled output when DUMPOUT is set
++    std::cerr << result;
+   if (result.size() == 0) {
+     ostringstream fs;
+     fs << "No output for " << fileName;
