@@ -1,0 +1,4 @@
+black: tests/test_pl_module.py clean
+black: tribev2/pl_module.py has 3 pre-existing diff lines on main, none added
+isort: clean
+pyflakes: clean

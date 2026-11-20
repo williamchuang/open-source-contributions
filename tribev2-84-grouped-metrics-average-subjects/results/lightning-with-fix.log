@@ -1,0 +1,2 @@
+{"case": "named subjects (predefined_mapping set)", "ok": true, "logged": ["val/subj_pearson/sub-01", "val/subj_pearson/sub-02"]}
+{"case": "average_subjects=True (predefined_mapping None)", "ok": true, "logged": ["val/subj_pearson/0"]}

@@ -1,0 +1,12 @@
+Python 3.12.3
+black==26.10.1
+exca==0.5.20
+isort==9.0.2
+lightning==2.5.6
+neuralset==0.0.2
+neuraltrain==0.0.2
+numpy==2.2.6
+pytest==9.2.0
+torch==2.6.0
+torchmetrics==1.9.0
+Linux x86_64
