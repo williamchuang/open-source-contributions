@@ -1,0 +1,12 @@
+{
+  "label": "main",
+  "cases": 37825,
+  "no_result": 15546,
+  "mismatches": 18994,
+  "t71_false_pass": 123,
+  "t71_false_fail": 6261,
+  "t72_false_pass": 785,
+  "t72_false_fail": 422,
+  "count_mismatch": 18994,
+  "report_count_mismatch": 0
+}

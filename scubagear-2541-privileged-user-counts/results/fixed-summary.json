@@ -1,0 +1,12 @@
+{
+  "label": "fixed",
+  "cases": 37825,
+  "no_result": 0,
+  "mismatches": 0,
+  "t71_false_pass": 0,
+  "t71_false_fail": 0,
+  "t72_false_pass": 0,
+  "t72_false_fail": 0,
+  "count_mismatch": 0,
+  "report_count_mismatch": 0
+}

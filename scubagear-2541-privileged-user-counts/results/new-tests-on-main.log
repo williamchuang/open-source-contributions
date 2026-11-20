@@ -1,0 +1,8 @@
+data.aad_test.test_PrivilegedUsers_DuplicateDisplayName_Correct: FAIL (13.079683ms)
+data.aad_test.test_PrivilegedUsers_MissingDisplayName_Correct: FAIL (13.289722ms)
+data.aad_test.test_PrivilegedUsers_NullDisplayName_Correct: FAIL (43.903735ms)
+data.aad_test.test_PrivilegedUsers_DuplicateDisplayName_Incorrect: FAIL (17.653546ms)
+data.aad_test.test_SecureScore_DuplicateDisplayName_Correct: FAIL (17.487707ms)
+data.aad_test.test_OnPremisesImmutableId_DuplicateDisplayName_Incorrect: FAIL (12.614329ms)
+PASS: 4/10
+FAIL: 6/10
